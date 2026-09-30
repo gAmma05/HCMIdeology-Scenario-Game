@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tư Tưởng Hồ Chí Minh - Chặng 1: Nhận diện sức mạnh chiến lược</title>
+  <meta name="description" content="Trò chơi tình huống tương tác môn Tư tưởng Hồ Chí Minh - Chặng 1: Nhận diện sức mạnh chiến lược">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Viewport Game Container -->
+  <div class="game-viewport" id="gameViewport" style="background-image: url('assets/images/real_bg_badinh.jpg');">
+
+    <!-- TOP HUD BAR -->
+    <header class="game-hud" id="mainHud">
+      <div class="hud-left">
+        <span class="stage-sub">TƯ TƯỞNG HỒ CHÍ MINH VỀ ĐẠI ĐOÀN KẾT TOÀN DÂN TỘC</span>
+        <h2 class="stage-main-title">Chặng 1: Nhận diện sức mạnh chiến lược</h2>
+      </div>
+
+      <div class="hud-center">
+        <div class="progress-pill">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFillBar" style="width: 100%;"></div>
+          </div>
+          <span class="progress-text" id="progressText">Tình huống 1 / 1</span>
+        </div>
+      </div>
+
+      <div class="hud-right">
+        <div class="score-box">
+          <span class="score-label">Điểm:</span>
+          <span class="score-val" id="scoreDisplay">0</span>
+        </div>
+        
+        <button class="hud-btn" id="soundToggleBtn" type="button">Âm thanh: Bật</button>
+      </div>
+    </header>
+
+    <!-- MAIN STAGE AREA -->
+    <main class="main-stage-container" id="mainStageArea">
+      
+      <!-- Stage Heading -->
+      <div class="chapter-hero-badge" id="chapterHeroBadge">
+        <div class="tag-ribbon">BÀI TẬP TÌNH HUỐNG LÝ LUẬN & LỊCH SỬ</div>
+        <h1 class="main-stage-heading">CHẶNG 1: NHẬN DIỆN SỨC MẠNH CHIẾN LƯỢC</h1>
+      </div>
+
+      <!-- VIEW MODE 1: LỜI DẪN / NARRATIVE -->
+      <section class="vn-dialogue-wrapper" id="vnDialogueView">
+        <div class="vn-character-card">
+          <div class="character-avatar-frame">
+            <img src="assets/images/ho_chi_minh_1946.jpg" alt="Chủ tịch Hồ Chí Minh (1946)" id="narratorImg">
+          </div>
+          <div class="character-nameplate">
+            <span id="narratorName">Chủ tịch Hồ Chí Minh</span>
+          </div>
+          <span class="avatar-caption">Ảnh tư liệu lịch sử (1946)</span>
+        </div>
+
+        <div class="vn-speech-box">
+          <div>
+            <div class="speech-header">
+              <span class="speaker-role" id="narratorRole">Lời dẫn lý luận</span>
+            </div>
+
+            <!-- Text Content -->
+            <div class="speech-text-content" id="dialogueText"></div>
+
+            <!-- Quote Block -->
+            <div class="quote-highlight-box" id="quoteBox" style="display: none;">
+              <p id="quoteText"></p>
+            </div>
+          </div>
+
+          <div class="speech-actions">
+            <button class="btn-gold" id="nextDialogueBtn" type="button">Tiếp tục</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW MODE 2: TÌNH HUỐNG & CÂU HỎI -->
+      <section class="scenario-view-card" id="scenarioView" style="display: none;">
+        <div class="scenario-header-bar">
+          <span class="scenario-tag" id="scenarioIndexBadge">TÌNH HUỐNG 1</span>
+          <span class="points-pill">+10 Điểm</span>
+        </div>
+
+        <!-- Trích dẫn nguồn tình huống -->
+        <div class="situation-quote-banner" id="situationQuoteBanner">
+          <div class="situation-quote-label">Lời dạy của Chủ tịch Hồ Chí Minh:</div>
+          <div class="quote-text-statement" id="situationQuote">
+            "Lúc nào dân ta đoàn kết muôn người như một thì nước ta độc lập, tự do"
+          </div>
+        </div>
+
+        <!-- Câu hỏi -->
+        <h3 class="question-text-title" id="scenarioQuestionText">
+          Dựa trên lời dạy của Bác: "Lúc nào dân ta đoàn kết muôn người như một thì nước ta độc lập, tự do", điều gì sẽ xảy ra nếu dân ta không đoàn kết?
+        </h3>
+
+        <!-- Các lựa chọn A, B, C, D -->
+        <div class="options-grid" id="optionsContainer">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- MODAL: KẾT QUẢ & GIẢI THÍCH -->
+    <div class="result-modal-overlay hidden" id="resultModal">
+      <div class="result-card" id="resultCard">
+        
+        <div class="result-status-badge status-correct" id="resultStatusBadge">
+          <span id="resultStatusText">CHÍNH XÁC</span>
+        </div>
+
+        <div class="score-awarded-banner plus-score" id="scoreAwardedBanner">
+          <span id="scoreAwardedText">+10 ĐIỂM</span>
+        </div>
+
+        <div class="feedback-body-box">
+          <p class="feedback-main-text" id="feedbackDetailText"></p>
+          
+          <div class="ideology-lesson-box" id="ideologyLessonBox">
+            <div class="ideology-lesson-title">BÀI HỌC CỐT LÕI TƯ TƯỞNG HỒ CHÍ MINH</div>
+            <div class="ideology-lesson-content" id="ideologyLessonContent"></div>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn-secondary" id="retryQuestionBtn" type="button">Thử lại</button>
+          <button class="btn-gold" id="proceedBtn" type="button">Hoàn thành Chặng 1</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="game-footer">
+      <div>Môn học: <strong style="color: #fff;">Tư tưởng Hồ Chí Minh</strong></div>
+      <div>Nguồn tư liệu: <span class="footer-source">Hồ Chí Minh Toàn tập (NXB Chính trị quốc gia Sự thật)</span> | Nguồn ảnh: <span class="footer-source">Wikimedia Commons</span></div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/gameData.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

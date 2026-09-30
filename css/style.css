@@ -1,0 +1,718 @@
+/* ==========================================================================
+   TƯ TƯỞNG HỒ CHÍ MINH - TRÒ CHƠI TÌNH HUỐNG LỊCH SỬ & LÝ LUẬN
+   Phong cách: Trang nghiêm, Học thuật, Tối giản, Tinh tế
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-deep: #160406;
+  --bg-surface: rgba(26, 8, 11, 0.94);
+  --bg-card: rgba(38, 12, 16, 0.9);
+  --bg-card-hover: rgba(54, 16, 22, 0.95);
+  
+  --gold-primary: #d4af37;
+  --gold-light: #f3e5ab;
+  --gold-dim: #997d28;
+  --border-gold: rgba(212, 175, 55, 0.35);
+  --border-gold-strong: rgba(212, 175, 55, 0.7);
+
+  --crimson-accent: #8b1822;
+  --crimson-dark: #4a090e;
+
+  --success-color: #15803d;
+  --success-bg: rgba(21, 128, 61, 0.25);
+  --success-border: #22c55e;
+
+  --error-color: #b91c1c;
+  --error-bg: rgba(185, 28, 28, 0.2);
+  --error-border: #ef4444;
+
+  --text-main: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  /* Typography */
+  --font-main: 'Be Vietnam Pro', -apple-system, sans-serif;
+  --font-serif: 'Merriweather', serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Viewport & Background */
+.game-viewport {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease;
+}
+
+.game-viewport::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center 30%, rgba(22, 4, 6, 0.7) 0%, rgba(15, 3, 4, 0.92) 80%, rgba(10, 2, 3, 0.98) 100%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   TOP HEADER / HUD BAR
+   ========================================================================== */
+.game-hud {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 2rem;
+  background: rgba(18, 4, 6, 0.95);
+  border-bottom: 1px solid var(--border-gold);
+  backdrop-filter: blur(10px);
+}
+
+.hud-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.stage-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+}
+
+.stage-main-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.hud-center {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-track {
+  width: 100px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 100%;
+  height: 100%;
+  background: var(--gold-primary);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.hud-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.score-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-gold);
+}
+
+.score-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+}
+
+.score-val {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hud-btn {
+  background: transparent;
+  border: 1px solid var(--border-gold);
+  color: var(--gold-light);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-family: var(--font-main);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hud-btn:hover {
+  background: var(--gold-primary);
+  color: var(--bg-deep);
+}
+
+/* ==========================================================================
+   MAIN STAGE CONTENT CONTAINER
+   ========================================================================== */
+.main-stage-container {
+  position: relative;
+  z-index: 5;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  max-width: 1020px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Chapter Heading */
+.chapter-hero-badge {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.tag-ribbon {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-gold);
+  padding-bottom: 0.2rem;
+}
+
+.main-stage-heading {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   VISUAL NOVEL / LỜI DẪN MODE
+   ========================================================================== */
+.vn-dialogue-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.vn-character-card {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.character-avatar-frame {
+  width: 140px;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-gold-strong);
+  background: #000000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.character-avatar-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.avatar-caption {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 140px;
+  line-height: 1.3;
+}
+
+.character-nameplate {
+  background: var(--crimson-dark);
+  border: 1px solid var(--border-gold);
+  border-radius: 4px;
+  padding: 0.2rem 0.75rem;
+  text-align: center;
+}
+
+.character-nameplate span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 0.03em;
+}
+
+/* Dialogue Speech Area */
+.vn-speech-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+}
+
+.speech-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.speaker-role {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.speech-text-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-main);
+  min-height: 60px;
+}
+
+/* Quote Box */
+.quote-highlight-box {
+  margin-top: 1rem;
+  background: rgba(212, 175, 55, 0.08);
+  border-left: 3px solid var(--gold-primary);
+  padding: 0.85rem 1.25rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.quote-highlight-box p {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.speech-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* Clean Buttons */
+.btn-gold {
+  background: var(--gold-primary);
+  color: #120406;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  border: 1px solid var(--gold-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-gold:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================================================
+   SCENARIO QUESTION & CHOICES
+   ========================================================================== */
+.scenario-view-card {
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.scenario-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 0.6rem;
+}
+
+.scenario-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.points-pill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Quote Context Card */
+.situation-quote-banner {
+  background: rgba(0, 0, 0, 0.4);
+  border-left: 3px solid var(--gold-primary);
+  border-radius: 0 6px 6px 0;
+  padding: 0.85rem 1.25rem;
+}
+
+.situation-quote-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.quote-text-statement {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-style: italic;
+  color: var(--gold-light);
+  line-height: 1.5;
+}
+
+.question-text-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Options Grid */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 800px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.option-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.option-card:hover:not(.disabled) {
+  background: var(--bg-card-hover);
+  border-color: var(--gold-primary);
+  transform: translateY(-2px);
+}
+
+.option-key {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-light);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.option-card:hover:not(.disabled) .option-key {
+  background: var(--gold-primary);
+  color: #120406;
+}
+
+.option-body-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-main);
+  flex: 1;
+}
+
+/* Feedback States */
+.option-card.correct-answer {
+  background: var(--success-bg) !important;
+  border-color: var(--success-border) !important;
+}
+
+.option-card.correct-answer .option-key {
+  background: var(--success-color) !important;
+  color: #ffffff !important;
+  border-color: var(--success-border) !important;
+}
+
+.option-card.wrong-answer {
+  background: var(--error-bg) !important;
+  border-color: var(--error-border) !important;
+}
+
+.option-card.wrong-answer .option-key {
+  background: var(--error-color) !important;
+  color: #ffffff !important;
+  border-color: var(--error-border) !important;
+}
+
+.option-card.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.option-card.correct-highlight {
+  border: 1px dashed var(--success-border);
+}
+
+/* ==========================================================================
+   RESULT & FEEDBACK MODAL
+   ========================================================================== */
+.result-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 2, 4, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.result-modal-overlay.hidden {
+  display: none;
+}
+
+.result-card {
+  width: 100%;
+  max-width: 600px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-gold-strong);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.result-status-badge {
+  display: inline-block;
+  padding: 0.35rem 1.2rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.status-correct {
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  color: #4ade80;
+}
+
+.status-wrong {
+  background: var(--error-bg);
+  border: 1px solid var(--error-border);
+  color: #f87171;
+}
+
+.score-awarded-banner {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.score-awarded-banner.plus-score {
+  color: var(--gold-light);
+}
+
+.score-awarded-banner.zero-score {
+  color: var(--text-muted);
+}
+
+.feedback-body-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.feedback-main-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.ideology-lesson-box {
+  background: rgba(212, 175, 55, 0.08);
+  border-left: 3px solid var(--gold-primary);
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.ideology-lesson-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+
+.ideology-lesson-content {
+  font-size: 0.9rem;
+  color: var(--gold-light);
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.game-footer {
+  position: relative;
+  z-index: 10;
+  padding: 0.65rem 2rem;
+  background: rgba(12, 3, 4, 0.95);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.footer-source {
+  color: var(--gold-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .game-hud {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .vn-dialogue-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+  }
+  .character-avatar-frame {
+    width: 100px;
+    height: 130px;
+  }
+  .scenario-view-card {
+    padding: 1.25rem;
+  }
+  .main-stage-heading {
+    font-size: 1.3rem;
+  }
+}
