@@ -9,7 +9,7 @@
     content="Trò chơi tình huống tương tác môn Tư tưởng Hồ Chí Minh - Chặng 1: Nhận diện sức mạnh chiến lược">
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2.1">
 </head>
 
 <body>
@@ -61,7 +61,6 @@
       <section class="scenario-view-card" id="scenarioView" style="display: none;">
         <div class="scenario-header-bar">
           <span class="scenario-tag" id="scenarioIndexBadge">TÌNH HUỐNG 1</span>
-          <span class="points-pill" id="scenarioPointsPill">+10 Điểm</span>
         </div>
 
         <!-- Trích dẫn nguồn tình huống -->
@@ -89,7 +88,17 @@
         <!-- Populated dynamically by JS for Stage 3 -->
       </section>
 
-      <!-- VIEW MODE 4: TỔNG KẾT CHẶNG & CHUNG CUỘC -->
+      <!-- VIEW MODE 4: HẢI TRÌNH ĐÀO VÀNG - NGOẠI GIAO NHÂN DÂN SỐ (CHẶNG 4) -->
+      <section class="scenario-view-card miner-stage-card" id="goldMinerStageView" style="display: none;">
+        <!-- Populated dynamically by JS for Stage 4 -->
+      </section>
+
+      <!-- VIEW MODE 5: MẠNG LƯỚI YÊU THƯƠNG - NỐI MẠCH NGUỒN DÂN TỘC (CHẶNG 5) -->
+      <section class="scenario-view-card network-stage-card" id="networkStageView" style="display: none;">
+        <!-- Populated dynamically by JS for Stage 5 -->
+      </section>
+
+      <!-- VIEW MODE 6: TỔNG KẾT CHẶNG & CHUNG CUỘC -->
       <section class="scenario-view-card" id="completionView"
         style="display: none; text-align: center; padding: 2.5rem 1.5rem; width: 100%;">
         <!-- Populated dynamically without destroying scenarioView -->
@@ -101,13 +110,10 @@
     <div class="result-modal-overlay hidden" id="resultModal">
       <div class="result-card" id="resultCard">
 
-        <!-- Modal Header: Trạng thái & Điểm số gọn gàng -->
+        <!-- Modal Header: Trạng thái gọn gàng -->
         <div class="result-header-row">
           <div class="result-status-badge status-correct" id="resultStatusBadge">
             <span id="resultStatusIcon">✓</span> <span id="resultStatusText">CHÍNH XÁC</span>
-          </div>
-          <div class="result-score-tag plus-score" id="scoreAwardedBanner">
-            <span id="scoreAwardedText">+10 ĐIỂM</span>
           </div>
         </div>
 
@@ -136,21 +142,12 @@
 
       </div>
     </div>
-
-    <!-- FOOTER -->
-    <footer class="game-footer">
-      <div>Môn học: <strong style="color: var(--gold-primary);">HCM202</strong></div>
-      <div class="score-box" id="footerScoreBox">
-        <span class="score-label">Điểm:</span>
-        <span class="score-val" id="scoreDisplay">0</span>
-      </div>
-    </footer>
   </div>
 
   <!-- Scripts -->
-  <script src="js/gameData.js"></script>
-  <script src="js/audio.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/gameData.js?v=2.1"></script>
+  <script src="js/audio.js?v=2.1"></script>
+  <script src="js/app.js?v=2.1"></script>
 </body>
 
 </html>

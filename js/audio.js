@@ -170,6 +170,15 @@ class SoundEngine {
         }
       });
 
+      this.bgmAudioElement.addEventListener('ended', () => {
+        if (!this.isMuted && this.bgmAudioElement) {
+          this.bgmAudioElement.currentTime = 0;
+          this.bgmAudioElement.play().catch((err) => {
+            console.debug("Loop replay pending:", err.message);
+          });
+        }
+      });
+
       this.bgmAudioElement.addEventListener('error', (e) => {
         console.warn("Audio file error, falling back to melodic synth:", e);
         this.startMelodicSynthBgm(musicData.melodyKey || "nhu_co_bac_trong_ngay_dai_thang");

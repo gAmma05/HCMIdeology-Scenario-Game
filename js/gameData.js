@@ -13,10 +13,10 @@ const GAME_DATA = {
       badge: "Chiến Lược Cách Mạng",
       background: "assets/images/real_bg_badinh.jpg",
       music: {
-        id: "nhu_co_bac_trong_ngay_dai_thang",
-        title: "Như có Bác trong ngày đại thắng",
-        author: "Nhạc & Lời: Nhạc sĩ Phạm Tuyên",
-        src: "assets/audio/nhu_co_bac_trong_ngay_dai_thang.mp3",
+        id: "chang_1",
+        title: "Khúc Ca Đoàn Kết Toàn Dân",
+        author: "Âm vang Chặng 1",
+        src: "assets/audio/chang_1.mp3",
         melodyKey: "nhu_co_bac_trong_ngay_dai_thang"
       },
       narrator: {
@@ -142,6 +142,84 @@ const GAME_DATA = {
           quoteLesson: "Dân như nước mình như cá. Dễ trăm lần không dân cũng chịu, khó vạn lần dân liệu cũng xong. Đại đoàn kết bắt nguồn từ sức mạnh vô biên của quần chúng nhân dân khi được giác ngộ và tổ chức.",
           coreTakeaway: "Quần chúng nhân dân là người sáng tạo ra lịch sử, là 'gốc' và là chủ thể tối cao tạo nên sức mạnh vô địch của khối đại đoàn kết toàn dân tộc.",
           hintText: "Hãy suy ngẫm xem trong tư tưởng của Bác, chủ thể nào là 'gốc', là cội nguồn của mọi thắng lợi cách mạng?"
+        },
+        {
+          id: "1-4",
+          scenarioIndex: 4,
+          title: "Đoàn kết trong Đảng - Hạt nhân của khối đại đoàn kết",
+          contextHeader: "TÌNH HUỐNG 4",
+          quoteContext: "Đoàn kết là một truyền thống cực kỳ quý báu của Đảng và của dân ta. Các đồng chí từ Trung ương đến các chi bộ cần phải giữ gìn sự đoàn kết nhất trí của Đảng như giữ gìn con ngươi của mắt mình.",
+          question: "Theo tư tưởng Hồ Chí Minh, vì sao việc giữ gìn sự đoàn kết, nhất trí trong Đảng lại đóng vai trò là \"hạt nhân\", quyết định sự thành bại của khối đại đoàn kết toàn dân tộc?",
+          options: [
+            {
+              id: "A",
+              text: "Vì Đảng là lực lượng trực tiếp nắm giữ toàn bộ cơ sở vật chất, tài chính và phương tiện truyền thông của quốc gia.",
+              isCorrect: false,
+              feedbackWrong: "Chưa đúng. Sức mạnh lãnh đạo của Đảng bắt nguồn từ niềm tin của quần chúng nhân dân chứ không phải dựa vào độc quyền vật chất (A), trông chờ ngoại viện (C) hay áp đặt một chiều (D)."
+            },
+            {
+              id: "B",
+              text: "Vì Đảng là hạt nhân lãnh đạo; Đảng có đoàn kết, trong sạch, vững mạnh thì mới làm gương và quy tụ, dẫn dắt được toàn dân tộc thành một khối thống nhất.",
+              isCorrect: true,
+              feedbackCorrect: "Chính xác! Bác dạy đoàn kết trong Đảng là hạt nhân của khối đại đoàn kết toàn dân tộc. Đảng lãnh đạo vững vàng, gương mẫu thì muôn triệu người dân mới đồng lòng tin tưởng hướng theo."
+            },
+            {
+              id: "C",
+              text: "Vì chỉ khi Đảng đoàn kết thì mới tranh thủ được các khoản viện trợ vũ khí tối tân từ các nước đồng minh.",
+              isCorrect: false,
+              feedbackWrong: "Chưa đúng. Sức mạnh lãnh đạo của Đảng bắt nguồn từ niềm tin của quần chúng nhân dân chứ không phải dựa vào độc quyền vật chất (A), trông chờ ngoại viện (C) hay áp đặt một chiều (D)."
+            },
+            {
+              id: "D",
+              text: "Vì sự đoàn kết trong Đảng giúp xóa bỏ hoàn toàn mọi tranh luận khoa học, tạo sự phục tùng tuyệt đối từ cấp dưới.",
+              isCorrect: false,
+              feedbackWrong: "Chưa đúng. Sức mạnh lãnh đạo của Đảng bắt nguồn từ niềm tin của quần chúng nhân dân chứ không phải dựa vào độc quyền vật chất (A), trông chờ ngoại viện (C) hay áp đặt một chiều (D)."
+            }
+          ],
+          correctOptionId: "B",
+          points: 10,
+          quoteLesson: "Đoàn kết là một truyền thống cực kỳ quý báu của Đảng và của dân ta. Các đồng chí từ Trung ương đến các chi bộ cần phải giữ gìn sự đoàn kết nhất trí của Đảng như giữ gìn con ngươi của mắt mình.",
+          coreTakeaway: "Đoàn kết trong Đảng là hạt nhân tiên quyết. Đảng có gương mẫu, trong sạch và đoàn kết nhất trí thì mới quy tụ và dẫn dắt được sức mạnh của toàn dân tộc.",
+          hintText: "Hãy suy ngẫm xem vai trò của Đảng đối với toàn dân tộc là hạt nhân gương mẫu, dẫn dắt hay dựa trên quyền lực vật chất/áp đặt?"
+        },
+        {
+          id: "1-5",
+          scenarioIndex: 5,
+          title: "Nền gốc của khối đại đoàn kết toàn dân tộc",
+          contextHeader: "TÌNH HUỐNG 5",
+          quoteContext: "Đại đoàn kết tức là trước hết phải đoàn kết đại đa số nhân dân, mà đại đa số nhân dân ta là công nhân, nông dân và các tầng lớp nhân dân lao động khác. Đó là nền gốc của đại đoàn kết.",
+          question: "Chủ tịch Hồ Chí Minh xác định lực lượng nào là \"nền gốc\", là cơ sở vững chắc nhất để xây dựng khối đại đoàn kết toàn dân tộc?",
+          options: [
+            {
+              id: "A",
+              text: "Liên minh giai cấp công nhân, giai cấp nông dân và tầng lớp trí thức.",
+              isCorrect: true,
+              feedbackCorrect: "Chính xác! Công nhân, nông dân và trí thức là lực lượng đông đảo nhất, trực tiếp sản xuất và chiến đấu. Liên minh này chính là 'nền gốc', là trụ cột vững chắc của Mặt trận dân tộc thống nhất."
+            },
+            {
+              id: "B",
+              text: "Tầng lớp tư sản dân tộc và các tiểu thương có tiềm lực kinh tế lớn ở đô thị.",
+              isCorrect: false,
+              feedbackWrong: "Chưa đúng. Bác chủ trương đoàn kết rộng rãi mọi tầng lớp yêu nước (B, D) và bạn bè quốc tế (C), nhưng 'nền gốc' căn bản và vững chắc nhất của khối đại đoàn kết luôn là liên minh Công - Nông - Trí thức."
+            },
+            {
+              id: "C",
+              text: "Các tổ chức quốc tế và các phong trào hòa bình ủng hộ Việt Nam từ nước ngoài.",
+              isCorrect: false,
+              feedbackWrong: "Chưa đúng. Bác chủ trương đoàn kết rộng rãi mọi tầng lớp yêu nước (B, D) và bạn bè quốc tế (C), nhưng 'nền gốc' căn bản và vững chắc nhất của khối đại đoàn kết luôn là liên minh Công - Nông - Trí thức."
+            },
+            {
+              id: "D",
+              text: "Đội ngũ nhân sĩ, trí thức du học từ phương Tây trở về nước.",
+              isCorrect: false,
+              feedbackWrong: "Chưa đúng. Bác chủ trương đoàn kết rộng rãi mọi tầng lớp yêu nước (B, D) và bạn bè quốc tế (C), nhưng 'nền gốc' căn bản và vững chắc nhất của khối đại đoàn kết luôn là liên minh Công - Nông - Trí thức."
+            }
+          ],
+          correctOptionId: "A",
+          points: 10,
+          quoteLesson: "Đại đoàn kết tức là trước hết phải đoàn kết đại đa số nhân dân, mà đại đa số nhân dân ta là công nhân, nông dân và các tầng lớp nhân dân lao động khác. Đó là nền gốc của đại đoàn kết.",
+          coreTakeaway: "Liên minh Công nhân - Nông dân - Trí thức là lực lượng đông đảo nhất, trực tiếp lao động sản xuất, là 'nền gốc' vững chắc của khối đại đoàn kết toàn dân tộc.",
+          hintText: "Hãy nhớ lời dạy của Bác: Đại đa số nhân dân lao động trực tiếp sản xuất là lực lượng nào để tạo nên 'nền gốc' của đại đoàn kết?"
         }
       ]
     },
@@ -153,10 +231,10 @@ const GAME_DATA = {
       badge: "Văn Hóa Ứng Xử Số",
       background: "assets/images/real_bg_badinh.jpg",
       music: {
-        id: "ho_chi_minh_dep_nhat_ten_nguoi",
-        title: "Hồ Chí Minh đẹp nhất tên Người",
-        author: "Nhạc & Lời: Nhạc sĩ Trần Kiết Tường",
-        src: "assets/audio/ho_chi_minh_dep_nhat_ten_nguoi.mp3",
+        id: "chang_2",
+        title: "Khúc Ca Khoan Dung Nhân Ái",
+        author: "Âm vang Chặng 2",
+        src: "assets/audio/chang_2.mp3",
         melodyKey: "ho_chi_minh_dep_nhat_ten_nguoi"
       },
       narrator: {
@@ -188,7 +266,7 @@ const GAME_DATA = {
           scenarioIndex: 1,
           isSocialModeration: true,
           title: "Người trẻ chia sẻ tin đồn thất thiệt",
-          contextHeader: "TÌNH HUỐNG 1: KIỂM DUYỆT & ỨNG XỬ SỐ",
+          contextHeader: "TÌNH HUỐNG 1",
           postImage: "assets/images/chang2_1.png",
           postAuthor: {
             handle: "@genz_lichsu99",
@@ -229,7 +307,7 @@ const GAME_DATA = {
           scenarioIndex: 2,
           isSocialModeration: true,
           title: "Kẻ mượn danh kích động thù hằn vùng miền",
-          contextHeader: "TÌNH HUỐNG 2: KIỂM DUYỆT & ỨNG XỬ SỐ",
+          contextHeader: "TÌNH HUỐNG 2",
           postImage: "assets/images/chang2_2.png",
           postAuthor: {
             handle: "@anonymous_vnvn",
@@ -270,7 +348,7 @@ const GAME_DATA = {
           scenarioIndex: 3,
           isSocialModeration: true,
           title: "Kiều bào xa xứ có góc nhìn băn khoăn",
-          contextHeader: "TÌNH HUỐNG 3: KIỂM DUYỆT & ỨNG XỬ SỐ",
+          contextHeader: "TÌNH HUỐNG 3",
           postImage: "assets/images/chang2_3.png",
           postAuthor: {
             handle: "@vietkieu_saigon",
@@ -311,7 +389,7 @@ const GAME_DATA = {
           scenarioIndex: 4,
           isSocialModeration: true,
           title: "Học giả mượn danh phản biện để phá hoại kinh tế",
-          contextHeader: "TÌNH HUỐNG 4: KIỂM DUYỆT & ỨNG XỬ SỐ",
+          contextHeader: "TÌNH HUỐNG 4",
           postImage: "assets/images/chang2_4.png",
           postAuthor: {
             handle: "@dr_kinhte_vimo",
@@ -352,7 +430,7 @@ const GAME_DATA = {
           scenarioIndex: 5,
           isSocialModeration: true,
           title: "Người từng lầm đường lạc lối thật tâm muốn tạ lỗi",
-          contextHeader: "TÌNH HUỐNG 5: KIỂM DUYỆT & ỨNG XỬ SỐ",
+          contextHeader: "TÌNH HUỐNG 5",
           postImage: "assets/images/chang2_5.png",
           postAuthor: {
             handle: "@nguoicon_lamlo_1975",
@@ -399,10 +477,10 @@ const GAME_DATA = {
       isBalanceStage: true,
       background: "assets/images/real_bg_badinh.jpg",
       music: {
-        id: "nhu_co_bac_trong_ngay_dai_thang",
-        title: "Như có Bác trong ngày đại thắng",
-        author: "Nhạc & Lời: Nhạc sĩ Phạm Tuyên",
-        src: "assets/audio/nhu_co_bac_trong_ngay_dai_thang.mp3",
+        id: "chang_3",
+        title: "Khúc Ca Cán Cân Xây & Chống",
+        author: "Âm vang Chặng 3",
+        src: "assets/audio/chang_3.mp3",
         melodyKey: "nhu_co_bac_trong_ngay_dai_thang"
       },
       narrator: {
@@ -423,13 +501,13 @@ const GAME_DATA = {
         },
         {
           speaker: "Tư tưởng Hồ Chí Minh",
-          text: "Trước mắt bạn là 6 thẻ hành vi. Hãy dùng chuột kéo và thả từng thẻ vào đúng đĩa cân tương ứng để thiết lập trạng thái cân bằng cho không gian mạng!",
+          text: "Trước mắt bạn là 10 thẻ hành vi. Hãy dùng chuột kéo và thả từng thẻ vào đúng đĩa cân tương ứng để thiết lập trạng thái cân bằng cho không gian mạng!",
           quote: null
         }
       ],
       balanceGame: {
-        targetTotal: 6,
-        pointsPerCard: 5,
+        targetTotal: 10,
+        pointsPerCard: 10,
         zones: [
           {
             id: "XAY",
@@ -437,7 +515,7 @@ const GAME_DATA = {
             title: "XÂY",
             sub: "Phủ xanh mạng xã hội",
             color: "#22c55e",
-            capacity: 3
+            capacity: 5
           },
           {
             id: "CHONG",
@@ -445,7 +523,7 @@ const GAME_DATA = {
             title: "CHỐNG",
             sub: "Triệt phá độc hại",
             color: "#ef4444",
-            capacity: 3
+            capacity: 5
           }
         ],
         cards: [
@@ -496,9 +574,482 @@ const GAME_DATA = {
             targetZone: "XAY",
             targetName: "XÂY",
             reason: "Xây dựng thế trận lòng dân vững chắc trên không gian mạng, biến mạng xã hội thành cầu nối gắn kết triệu con tim."
+          },
+          {
+            id: "c7",
+            num: 7,
+            text: "Chủ động viết bài, làm infographic giải thích cặn kẽ đường lối, chính sách mới cho bạn bè cùng hiểu.",
+            targetZone: "XAY",
+            targetName: "XÂY",
+            reason: "Tích cực truyền thông chính sách, củng cố nhận thức đúng đắn và nâng cao sự đồng thuận xã hội ngay từ thế hệ trẻ."
+          },
+          {
+            id: "c8",
+            num: 8,
+            text: "Cảnh báo người thân, bạn bè về các thủ đoạn giả mạo tổ chức từ thiện để trục lợi và gây mất niềm tin.",
+            targetZone: "CHONG",
+            targetName: "CHỐNG",
+            reason: "Chủ động phòng ngừa tội phạm mạng, bảo vệ niềm tin của nhân dân và ngăn ngừa sự lợi dụng tinh thần tương thân tương ái."
+          },
+          {
+            id: "c9",
+            num: 9,
+            text: "Chia sẻ khoảnh khắc xúc động về sự giúp đỡ lẫn nhau giữa đồng bào các dân tộc thiểu số và người Kinh.",
+            targetZone: "XAY",
+            targetName: "XÂY",
+            reason: "Bồi đắp khối đại đoàn kết các dân tộc anh em theo lời Bác: 'Sông có thể cạn, núi có thể mòn, song mối đoàn kết ấy không bao giờ giảm bớt'."
+          },
+          {
+            id: "c10",
+            num: 10,
+            text: "Kiên quyết phản đối và yêu cầu gỡ bỏ các bình luận dùng lời lẽ thù ghét, xúc phạm danh dự đồng bào kiều bào.",
+            targetZone: "CHONG",
+            targetName: "CHỐNG",
+            reason: "Ngăn chặn tư tưởng kỳ thị, chia rẽ kiều bào, kiên quyết bảo vệ tinh thần quy tụ kiều bào hướng về nguồn cội Tổ quốc."
           }
         ]
       }
+    },
+    {
+      id: 4,
+      code: "STAGE_4",
+      title: "CHẶNG 4: NGOẠI GIAO NHÂN DÂN SỐ",
+      topic: "Hải Trình Đào Vàng - Bản Lĩnh Đại Sứ Số: Tư tưởng Hồ Chí Minh về Đoàn Kết Quốc Tế",
+      badge: "Đại Sứ Số Toàn Cầu",
+      isGoldMinerStage: true,
+      background: "assets/images/real_bg_badinh.jpg",
+      music: {
+        id: "chang_4",
+        title: "Khúc Ca Ngoại Giao Nhân Dân",
+        author: "Âm vang Chặng 4",
+        src: "assets/audio/chang_4.mp3",
+        melodyKey: "nhu_co_bac_trong_ngay_dai_thang"
+      },
+      narrator: {
+        name: "Tư tưởng Hồ Chí Minh",
+        title: "Lời dạy về Đoàn Kết Quốc Tế & Ngoại Giao Nhân Dân",
+        avatar: "assets/images/ho_chi_minh_1946.jpg"
+      },
+      introDialogue: [
+        {
+          speaker: "Tư tưởng Hồ Chí Minh",
+          text: "Đoàn kết quốc tế là sự kết hợp sức mạnh dân tộc với sức mạnh thời đại. Mỗi công dân mạng Việt Nam là một 'đại sứ số' trên không gian mạng toàn cầu.",
+          quote: null
+        },
+        {
+          speaker: "Tư tưởng Hồ Chí Minh",
+          text: "Chủ tịch Hồ Chí Minh đã căn dặn về sách lược ngoại giao chính nghĩa:",
+          quote: "Thực lực là cái chiêng mà ngoại giao là cái tiếng. Chiêng có to tiếng mới lớn. Phải biết kết hợp sức mạnh dân tộc với sức mạnh thời đại."
+        },
+        {
+          speaker: "Tư tưởng Hồ Chí Minh",
+          text: "Hãy dùng sự sáng suốt để chọn đáp án đúng và ngắm bắn mỏ neo vượt qua các luồng nhiễu loạn để kéo về khối đáp án chính xác!",
+          quote: null
+        }
+      ],
+      scenarios: [
+        {
+          id: "4-1",
+          scenarioIndex: 1,
+          title: "Đấu tranh bảo vệ chủ quyền biển đảo",
+          contextHeader: "CÂU 1: HẢI TRÌNH ĐÀO VÀNG",
+          question: "Trên diễn đàn quốc tế xuất hiện các bản đồ xuyên tạc ranh giới lãnh hải Việt Nam tại Biển Đông. Để thực hiện ngoại giao nhân dân số vì chính nghĩa, hành động chuẩn xác nhất là gì?",
+          options: [
+            {
+              id: "A",
+              text: "Kêu gọi cộng đồng mạng tràn vào tài khoản đối phương spam bão icon phẫn nộ và chửi bới.",
+              isCorrect: false
+            },
+            {
+              id: "B",
+              text: "Xuất bản bài viết đa ngôn ngữ trích dẫn chứng cứ lịch sử và Công ước LHQ về Luật Biển (UNCLOS 1982) khẳng định chủ quyền Hoàng Sa, Trường Sa.",
+              isCorrect: true
+            },
+            {
+              id: "C",
+              text: "Đăng tải loạt ảnh danh lam thắng cảnh và ẩm thực các vùng miền để lấn át bài viết xuyên tạc.",
+              isCorrect: false
+            },
+            {
+              id: "D",
+              text: "Giữ im lặng tuyệt đối vì việc tranh chấp chủ quyền là trách nhiệm riêng của cơ quan ngoại giao nhà nước.",
+              isCorrect: false
+            }
+          ],
+          correctOptionId: "B",
+          points: 10,
+          quoteLesson: "Phải biết kết hợp sức mạnh dân tộc với sức mạnh thời đại, lấy chính nghĩa, công lý và luật pháp quốc tế làm chỗ dựa vững chắc.",
+          feedbackCorrect: "Chính xác! Ngoại giao số vì chính nghĩa phải lấy cơ sở pháp lý quốc tế (UNCLOS 1982) và chứng cứ lịch sử làm vũ khí sắc bén nhất để tạo sự đồng thuận quốc tế.",
+          feedbackWrong: "Chưa đúng. Spam cảm tính (A) làm xấu hình ảnh đất nước; quảng bá ẩm thực (C) không trực diện giải quyết tranh biện pháp lý; im lặng (D) là thiếu trách nhiệm của công dân số.",
+          coreTakeaway: "Ngoại giao nhân dân số vì chính nghĩa phải lấy cơ sở pháp lý quốc tế (UNCLOS 1982) và sự thật lịch sử làm vũ khí sắc bén nhất."
+        },
+        {
+          id: "4-2",
+          scenarioIndex: 2,
+          title: "Quảng bá hình ảnh Việt Nam đổi mới và hòa bình",
+          contextHeader: "CÂU 2: HẢI TRÌNH ĐÀO VÀNG",
+          question: "Khi tham gia một diễn đàn thanh niên quốc tế, bạn nhận thấy một số bạn trẻ nước ngoài vẫn giữ định kiến Việt Nam là nước nghèo nàn, lạc hậu và gắn liền với chiến tranh. Bạn xử lý như thế nào?",
+          options: [
+            {
+              id: "A",
+              text: "Sáng tạo video ngắn bằng tiếng Anh giới thiệu sự phát triển kinh tế số, xã hội bình yên và con người thân thiện của Việt Nam.",
+              isCorrect: true
+            },
+            {
+              id: "B",
+              text: "Chỉ trích gay gắt các bạn trẻ quốc tế là thiếu kiến thức địa lý và yêu cầu họ lập tức xin lỗi.",
+              isCorrect: false
+            },
+            {
+              id: "C",
+              text: "Đăng tải toàn văn các báo cáo kinh tế vĩ mô và nghị quyết bằng tiếng Việt lên diễn đàn.",
+              isCorrect: false
+            },
+            {
+              id: "D",
+              text: "Tranh luận nảy lửa và tuyên bố không thèm giao lưu với những người có định kiến.",
+              isCorrect: false
+            }
+          ],
+          correctOptionId: "A",
+          points: 10,
+          quoteLesson: "Việt Nam là bạn, là đối tác tin cậy và là thành viên có trách nhiệm trong cộng đồng quốc tế.",
+          feedbackCorrect: "Chính xác! Kể những câu chuyện đời thường sinh động, tích cực là cách lan tỏa 'sức mạnh mềm' hiệu quả nhất, hiện thực hóa đường lối Việt Nam là bạn, là đối tác tin cậy của bạn bè năm châu.",
+          feedbackWrong: "Chưa đúng. Công kích (B, D) làm gia tăng rào cản; dùng văn bản hành chính hàn lâm (C) không phù hợp tâm lý tiếp nhận của giới trẻ quốc tế.",
+          coreTakeaway: "Lan tỏa 'sức mạnh mềm': Kể câu chuyện sinh động, chân thực về văn hóa và con người Việt Nam để xóa bỏ định kiến."
+        },
+        {
+          id: "4-3",
+          scenarioIndex: 3,
+          title: "Kết hợp sức mạnh dân tộc với sức mạnh thời đại",
+          contextHeader: "CÂU 3: HẢI TRÌNH ĐÀO VÀNG",
+          question: "Theo tư tưởng Hồ Chí Minh, mục đích cao nhất của việc phát huy 'sức mạnh thời đại' và đoàn kết quốc tế trong kỷ nguyên số là gì?",
+          options: [
+            {
+              id: "A",
+              text: "Tranh thủ tối đa nguồn viện trợ tài chính và phụ thuộc vào công nghệ của các nước lớn.",
+              isCorrect: false
+            },
+            {
+              id: "B",
+              text: "Nhượng bộ một số quyền lợi cốt lõi về dữ liệu số để đổi lấy sự ủng hộ quốc tế.",
+              isCorrect: false
+            },
+            {
+              id: "C",
+              text: "Tranh thủ sự ủng hộ về nguồn lực, tri thức toàn cầu để phục vụ mục tiêu độc lập, tự chủ và xây dựng đất nước giàu mạnh.",
+              isCorrect: true
+            },
+            {
+              id: "D",
+              text: "Cô lập hoàn toàn môi trường mạng nội bộ để bảo đảm an toàn tuyệt đối, tránh hội nhập.",
+              isCorrect: false
+            }
+          ],
+          correctOptionId: "C",
+          points: 10,
+          quoteLesson: "Muốn người ta giúp cho thì trước hết mình phải tự giúp lấy mình đã. Kết hợp sức mạnh dân tộc với sức mạnh thời đại trên nguyên tắc giữ vững độc lập, tự chủ.",
+          feedbackCorrect: "Chính xác! Bác dạy đoàn kết quốc tế phải dựa trên tinh thần tự lực cánh sinh: kết hợp sức mạnh thời đại để củng cố nội lực, bảo vệ vững chắc độc lập và phát triển đất nước.",
+          feedbackWrong: "Chưa đúng. Ỷ lại (A) hay nhượng bộ chủ quyền số (B) đều làm suy yếu đất nước; 'bế quan tỏa cảng' (D) đi ngược lại xu thế phát triển của thời đại.",
+          coreTakeaway: "Đoàn kết quốc tế trên cơ sở tự lực cánh sinh: Tranh thủ nguồn lực toàn cầu để phục vụ mục tiêu độc lập, tự chủ và giàu mạnh."
+        },
+        {
+          id: "4-4",
+          scenarioIndex: 4,
+          title: "Ứng phó với các cuộc tấn công mạng xuyên quốc gia",
+          contextHeader: "CÂU 4: HẢI TRÌNH ĐÀO VÀNG",
+          question: "Khi hệ thống dữ liệu quốc gia đối mặt với đợt tấn công mạng quy mô lớn từ các tổ chức tội phạm xuyên biên giới, hành động hợp tác quốc tế phù hợp nhất là gì?",
+          options: [
+            {
+              id: "A",
+              text: "Kêu gọi các nhóm tin tặc tự do trong nước tấn công trả đũa phá hủy máy chủ nước ngoài.",
+              isCorrect: false
+            },
+            {
+              id: "B",
+              text: "Tích cực chia sẻ thông tin cảnh báo kỹ thuật và phối hợp cùng các tổ chức an toàn thông tin quốc tế để truy vết, triệt phá mã độc.",
+              isCorrect: true
+            },
+            {
+              id: "C",
+              text: "Cắt đứt hoàn toàn cáp quang biển và ngừng mọi kết nối internet đi quốc tế.",
+              isCorrect: false
+            },
+            {
+              id: "D",
+              text: "Giấu kín thông tin sự cố để tránh ảnh hưởng đến uy tín công nghệ của đất nước.",
+              isCorrect: false
+            }
+          ],
+          correctOptionId: "B",
+          points: 10,
+          quoteLesson: "Trước các thách thức an ninh phi truyền thống, sự hợp tác minh bạch, có trách nhiệm dựa trên luật pháp quốc tế là chìa khóa bảo vệ chủ quyền số.",
+          feedbackCorrect: "Chính xác! An ninh phi truyền thống mang tính toàn cầu; cần chủ động, minh bạch và có trách nhiệm hợp tác quốc tế theo luật pháp để ngăn ngừa tội phạm công nghệ cao.",
+          feedbackWrong: "Chưa đúng. Tấn công phi pháp (A) vi phạm chuẩn mực quốc tế; cắt cáp tự cô lập (C) làm tê liệt kinh tế số; giấu giếm (D) làm tăng nguy cơ tổn thất diện rộng.",
+          coreTakeaway: "Hợp tác an ninh mạng quốc tế: Chủ động, minh bạch và trách nhiệm theo chuẩn mực luật pháp quốc tế."
+        },
+        {
+          id: "4-5",
+          scenarioIndex: 5,
+          title: "Kết nối trí thức kiều bào trên không gian số",
+          contextHeader: "CÂU 5: HẢI TRÌNH ĐÀO VÀNG",
+          question: "Để khơi dậy tinh thần yêu nước và tranh thủ nguồn lực chất xám của cộng đồng người Việt Nam ở nước ngoài, người trẻ nên phát huy không gian số như thế nào?",
+          options: [
+            {
+              id: "A",
+              text: "Xây dựng các mạng lưới, diễn đàn học thuật cởi mở để kiều bào thuận tiện hiến kế, chuyển giao công nghệ cho Tổ quốc.",
+              isCorrect: true
+            },
+            {
+              id: "B",
+              text: "Luôn hoài nghi và kiểm duyệt khắt khe mọi ý kiến đóng góp của người xa xứ.",
+              isCorrect: false
+            },
+            {
+              id: "C",
+              text: "Chỉ kêu gọi kiều bào gửi kiều hối hỗ trợ tài chính, không cần tham gia thảo luận các vấn đề phát triển.",
+              isCorrect: false
+            },
+            {
+              id: "D",
+              text: "Yêu cầu kiều bào phải từ bỏ hoàn toàn lối sống, thói quen ở nước sở tại trước khi tham gia kết nối.",
+              isCorrect: false
+            }
+          ],
+          correctOptionId: "A",
+          points: 10,
+          quoteLesson: "Bác luôn căn dặn: 'Kiều bào là bộ phận không thể tách rời của cộng đồng dân tộc Việt Nam.' Luôn mở rộng vòng tay đón nhận trí thức phụng sự quê hương.",
+          feedbackCorrect: "Chính xác! Bác luôn coi người Việt Nam ở nước ngoài là khúc ruột dặm trường; không gian số là cầu nối lý tưởng nhất để quy tụ trí thức kiều bào cùng chung tay phát triển non sông.",
+          feedbackWrong: "Chưa đúng. Định kiến (B, D) hay chỉ nhìn nhận kiều bào ở khía cạnh tiền bạc (C) sẽ làm tổn thương lòng yêu nước và rạn nứt khối đại đoàn kết toàn dân tộc.",
+          coreTakeaway: "Quy tụ trí thức kiều bào: Xây dựng diễn đàn học thuật cởi mở, kết nối chất xám phụng sự Tổ quốc."
+        }
+      ]
+    },
+    {
+      id: 5,
+      code: "STAGE_5",
+      title: "CHẶNG 5: HƯỚNG VỀ CỘI NGUỒN",
+      topic: "MẠNG LƯỚI YÊU THƯƠNG - NỐI MẠCH NGUỒN DÂN TỘC",
+      badge: "Nối Mạch Nguồn Dân Tộc",
+      background: "assets/images/real_bg_badinh.jpg",
+      isNetworkStage: true,
+      music: {
+        id: "chang_5",
+        title: "Khúc Ca Nối Mạch Nguồn Dân Tộc",
+        author: "Âm vang Chặng 5",
+        src: "assets/audio/chang_5.mp3",
+        melodyKey: "nhu_co_bac_trong_ngay_dai_thang"
+      },
+      narrator: {
+        name: "Tư tưởng Hồ Chí Minh",
+        title: "Khúc Ruột Dặm Trường",
+        avatar: "assets/images/ho_chi_minh_1946.jpg",
+        avatarSource: "Ảnh tư liệu lịch sử (Wikimedia Commons)"
+      },
+      introDialogue: [
+        {
+          speaker: "Tư tưởng Hồ Chí Minh",
+          text: "Chủ tịch Hồ Chí Minh luôn khẳng định: Kiều bào là 'khúc ruột dặm trường', là bộ phận máu thịt không thể tách rời của dân tộc Việt Nam. Dù ở bất cứ nơi đâu trên địa cầu, hơn 5,3 triệu đồng bào xa xứ vẫn luôn đau đáu hướng về quê hương.",
+          quote: "Tổ quốc và Chính phủ luôn luôn nhớ thương các đồng bào, như bố mẹ nhớ thương những đứa con đi vắng."
+        },
+        {
+          speaker: "Tư tưởng Hồ Chí Minh",
+          text: "Trong kỷ nguyên số, không gian mạng chính là cầu nối xóa nhòa khoảng cách địa lý. Hãy xoay các khớp nối cáp quang để thông suốt 5 mạch nguồn kiều bào hòa cùng nhịp đập non sông!",
+          quote: "Mỗi người con đất Việt ở hải ngoại đều là một đại sứ gắn kết, cùng chung tay xây dựng non sông gấm vóc."
+        }
+      ],
+      scenarios: [
+        {
+          id: "5-1",
+          scenarioIndex: 1,
+          title: "Giữ gìn bản sắc và tiếng mẹ đẻ cho thế hệ tương lai",
+          contextHeader: "MÀN 1 • KIỀU BÀO CHÂU ÂU",
+          originStation: "Trạm Vệ Tinh Châu Âu",
+          originFlag: "🇪🇺",
+          targetStation: "Tâm Điểm Tổ Quốc Việt Nam",
+          targetFlag: "🇻🇳",
+          missionName: "Khai mở tiếng Việt số",
+          issueText: "Nguy cơ thanh thiếu niên gốc Việt sinh ra và lớn lên ở nước ngoài dần mai một khả năng nói tiếng Việt và hiểu biết về cội nguồn.",
+          gridRows: 3,
+          gridCols: 4,
+          startPos: { r: 0, c: 0, fromPort: 3 },
+          endPos: { r: 2, c: 3, toPort: 1 },
+          grid: [
+            [
+              { type: 'corner', rot: 1 },
+              { type: 'straight', rot: 1 },
+              { type: 'corner', rot: 3 },
+              { type: 'straight', rot: 1 }
+            ],
+            [
+              { type: 'corner', rot: 2 },
+              { type: 'straight', rot: 1 },
+              { type: 'corner', rot: 0 },
+              { type: 'corner', rot: 3 }
+            ],
+            [
+              { type: 'straight', rot: 1 },
+              { type: 'corner', rot: 2 },
+              { type: 'corner', rot: 3 },
+              { type: 'straight', rot: 1 }
+            ]
+          ],
+          quoteLesson: "Bác dạy: 'Tiếng nói là thứ của cải vô cùng lâu đời và quý báu của dân tộc'.",
+          coreTakeaway: "Giữ gìn tiếng Việt qua các lớp học trực tuyến và thư viện số là giữ lấy sợi dây tâm hồn thiêng liêng nối các thế hệ kiều bào với đất mẹ."
+        },
+        {
+          id: "5-2",
+          scenarioIndex: 2,
+          title: "Trí thức kiều bào hiến kế xây dựng non sông",
+          contextHeader: "MÀN 2 • BẮC MỸ & SILICON VALLEY",
+          originStation: "Trạm Vệ Tinh Bắc Mỹ",
+          originFlag: "🇺🇸",
+          targetStation: "Tâm Điểm Tổ Quốc Việt Nam",
+          targetFlag: "🇻🇳",
+          missionName: "Hiến kế non sông",
+          issueText: "Vận dụng không gian mạng kết nối hơn 5,3 triệu người Việt ở nước ngoài mang lại lợi ích cốt lõi nào cho khối đại đoàn kết?",
+          gridRows: 3,
+          gridCols: 4,
+          startPos: { r: 0, c: 0, fromPort: 3 },
+          endPos: { r: 2, c: 3, toPort: 1 },
+          grid: [
+            [
+              { type: 'straight', rot: 1 },
+              { type: 'straight', rot: 1 },
+              { type: 'corner', rot: 1 },
+              { type: 'corner', rot: 0 }
+            ],
+            [
+              { type: 'corner', rot: 3 },
+              { type: 'straight', rot: 0 },
+              { type: 'straight', rot: 0 },
+              { type: 'straight', rot: 0 }
+            ],
+            [
+              { type: 'straight', rot: 1 },
+              { type: 'corner', rot: 1 },
+              { type: 'corner', rot: 2 },
+              { type: 'straight', rot: 1 }
+            ]
+          ],
+          quoteLesson: "Đại đoàn kết là sức mạnh vô địch. Tri thức kiều bào là nguồn lực vô giá của non sông.",
+          coreTakeaway: "Chính xác! Lợi ích cốt lõi là tạo môi trường số cởi mở để kiều bào đóng góp tri thức, chuyển giao công nghệ cao, hiến kế phát triển kinh tế - xã hội vì một Việt Nam hùng cường."
+        },
+        {
+          id: "5-3",
+          scenarioIndex: 3,
+          title: "Nghĩa đồng bào vượt đại dương trong thiên tai bão lũ",
+          contextHeader: "MÀN 3 • ĐÔNG BẮC Á",
+          originStation: "Trạm Vệ Tinh Đông Bắc Á",
+          originFlag: "🇯🇵",
+          targetStation: "Tâm Điểm Tổ Quốc Việt Nam",
+          targetFlag: "🇻🇳",
+          missionName: "Một dải non sông - Triệu tấm lòng vàng",
+          issueText: "Mỗi khi quê hương chịu ảnh hưởng của bão lũ, kiều bào đau đáu hướng về người thân nhưng gặp khó khăn về kênh quyên góp kịp thời và an toàn.",
+          gridRows: 3,
+          gridCols: 4,
+          startPos: { r: 1, c: 0, fromPort: 3 },
+          endPos: { r: 1, c: 3, toPort: 1 },
+          grid: [
+            [
+              { type: 'corner', rot: 3 },
+              { type: 'corner', rot: 0 },
+              { type: 'straight', rot: 1 },
+              { type: 'corner', rot: 1 }
+            ],
+            [
+              { type: 'corner', rot: 1 },
+              { type: 'corner', rot: 2 },
+              { type: 'corner', rot: 0 },
+              { type: 'straight', rot: 1 }
+            ],
+            [
+              { type: 'straight', rot: 0 },
+              { type: 'straight', rot: 0 },
+              { type: 'corner', rot: 3 },
+              { type: 'corner', rot: 1 }
+            ]
+          ],
+          quoteLesson: "Nhiễu điều phủ lấy giá gương / Người trong một nước phải thương nhau cùng.",
+          coreTakeaway: "Nền tảng số giúp tấm lòng cứu trợ của đồng bào xa xứ đến trực tiếp với bà con vùng khó khăn minh bạch, nhanh chóng và ấm áp nhất."
+        },
+        {
+          id: "5-4",
+          scenarioIndex: 4,
+          title: "Doanh nhân kiều bào đưa nông sản, thương hiệu Việt ra thế giới",
+          contextHeader: "MÀN 4 • KIỀU BÀO CHÂU ÚC",
+          originStation: "Trạm Vệ Tinh Châu Úc",
+          originFlag: "🇦🇺",
+          targetStation: "Tâm Điểm Tổ Quốc Việt Nam",
+          targetFlag: "🇻🇳",
+          missionName: "Cầu nối giao thương Việt",
+          issueText: "Nông sản, sản phẩm OCOP và văn hóa ẩm thực truyền thống trong nước muốn vươn ra thị trường toàn cầu nhưng thiếu kênh phân phối số tin cậy.",
+          gridRows: 3,
+          gridCols: 4,
+          startPos: { r: 0, c: 0, fromPort: 3 },
+          endPos: { r: 2, c: 3, toPort: 1 },
+          grid: [
+            [
+              { type: 'straight', rot: 1 },
+              { type: 'corner', rot: 0 },
+              { type: 'straight', rot: 0 },
+              { type: 'corner', rot: 3 }
+            ],
+            [
+              { type: 'corner', rot: 1 },
+              { type: 'corner', rot: 3 },
+              { type: 'corner', rot: 0 },
+              { type: 'straight', rot: 0 }
+            ],
+            [
+              { type: 'straight', rot: 1 },
+              { type: 'corner', rot: 2 },
+              { type: 'corner', rot: 2 },
+              { type: 'straight', rot: 1 }
+            ]
+          ],
+          quoteLesson: "Bác khẳng định người Việt ở hải ngoại là sứ giả văn hóa và kinh tế của Tổ quốc.",
+          coreTakeaway: "Mạng lưới thương mại điện tử xuyên biên giới do kiều bào làm cầu nối giúp đưa thương hiệu Việt Nam vươn tầm quốc tế."
+        },
+        {
+          id: "5-5",
+          scenarioIndex: 5,
+          title: "Bảo vệ nền tảng tư tưởng và đấu tranh chính nghĩa từ hải ngoại",
+          contextHeader: "MÀN 5 • KIỀU BÀO TOÀN CẦU",
+          originStation: "Trạm Vệ Tinh Toàn Cầu",
+          originFlag: "🌐",
+          targetStation: "Tâm Điểm Tổ Quốc Việt Nam",
+          targetFlag: "🇻🇳",
+          missionName: "Lá chắn số kiều bào",
+          issueText: "Các thế lực thù địch ở hải ngoại thường xuyên lập các diễn đàn xuyên tạc tình hình đất nước, bóp méo khối đại đoàn kết.",
+          gridRows: 3,
+          gridCols: 4,
+          startPos: { r: 0, c: 0, fromPort: 3 },
+          endPos: { r: 2, c: 3, toPort: 1 },
+          grid: [
+            [
+              { type: 'straight', rot: 0 },
+              { type: 'straight', rot: 0 },
+              { type: 'corner', rot: 0 },
+              { type: 'corner', rot: 3 }
+            ],
+            [
+              { type: 'straight', rot: 0 },
+              { type: 'corner', rot: 2 },
+              { type: 'corner', rot: 1 },
+              { type: 'corner', rot: 0 }
+            ],
+            [
+              { type: 'corner', rot: 3 },
+              { type: 'corner', rot: 2 },
+              { type: 'straight', rot: 0 },
+              { type: 'straight', rot: 0 }
+            ]
+          ],
+          quoteLesson: "Sự thật và lòng yêu nước không có biên giới.",
+          coreTakeaway: "Tiếng nói phản biện chính nghĩa của cộng đồng kiều bào yêu nước tại sở tại chính là tấm khiên vững chắc đập tan mọi luận điệu chia rẽ thù địch."
+        }
+      ]
     }
   ]
 };
